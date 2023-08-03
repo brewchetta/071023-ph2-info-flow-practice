@@ -19,17 +19,22 @@ code {
 }
 
 .game-card {
+  position: relative;
+  top: 0;
+  left: 0;
   background-position: center;
   background-size: cover;
   text-align: left;
   margin: 3em;
   box-shadow: 3px 5px black;
-  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, top 0.3s, left 0.3s;
 }
 
 .game-card:hover {
   box-shadow: 5px 15px black;
   cursor: pointer;
+  top: -5px;
+  left: -5px;
 }
 
 .game-card h2, .game-card h3 {
