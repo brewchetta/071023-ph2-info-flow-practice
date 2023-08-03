@@ -1,12 +1,13 @@
-function SearchBarHeader() {
+function SearchBarHeader({ setFilterBy, setGenreFilter }) {
+
   return (
     <div className="search-bar-header">
 
-      <button>Show All Games</button>
-      <button>Show Played Games</button>
-      <button>Show Unplayed Games</button>
+      <button onClick={e => setFilterBy(e.target.name)} name="all">Show All Games</button>
+      <button onClick={e => setFilterBy(e.target.name)} name="played">Show Played Games</button>
+      <button onClick={e => setFilterBy(e.target.name)} name="unplayed">Show Unplayed Games</button>
 
-      <input type="search" placeholder="search by genre" />
+      <input onChange={e => setGenreFilter(e.target.value)} type="search" placeholder="search by genre" />
 
     </div>
   )
